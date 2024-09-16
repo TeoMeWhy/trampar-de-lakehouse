@@ -21,7 +21,7 @@ class IngestaoFullBronze:
         return df
     
     def transform(self, df):
-        query = self.query.format(table=table)
+        query = self.query.format(table=self.table)
         df.createOrReplaceTempView(self.table)
         df_transform = self.spark.sql(query)
         return df_transform
