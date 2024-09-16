@@ -23,7 +23,12 @@ SELECT id AS idVaga,
             ELSE country
        END AS descPaisVaga,
        
-       currency AS descMoedaVaga,
+       CASE
+            WHEN currency IN ('Real', 'R$', 'BRL') THEN 'BRL'
+            WHEN currency IN ('U$D','U$','USD') THEN 'USD'
+            ELSE currency            
+       END AS descMoedaVaga,
+       
        salary AS vlSalario,
        CASE WHEN ready = 1 THEN 1 ELSE 0 END AS descPronto, -- vaga disponível no site
        minimumYears AS vlExpMinima, -- Se exige exp mínima
