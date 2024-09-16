@@ -9,8 +9,8 @@ import ingestors
 
 catalog = 'bronze'
 database = 'trampar_de_casa'
-table = dbutils.widget.get("table")
-id_field = dbutils.widget.get("id_field")
+table = dbutils.widgets.get("table")
+id_field = dbutils.widgets.get("id_field")
 
 checkpoint_path = f"/Volumes/raw/trampar_de_casa/full-load/checkpoint_{table}/"
 
