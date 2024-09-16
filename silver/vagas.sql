@@ -9,7 +9,7 @@ WITH tb_first AS (
           language AS descLinguagemVaga,
 
           CASE 
-                WHEN country IN ('Global', 'International', 'Mundial') THEN 'International'
+                WHEN country IN ('Global', 'International', 'Mundial') THEN 'Internacional'
                 WHEN country IN ('Paraná',
                                 'Porto Alegre-RS',
                                 'Bahia',
