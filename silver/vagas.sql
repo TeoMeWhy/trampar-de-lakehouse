@@ -7,8 +7,17 @@ SELECT id AS idVaga,
        language AS descLinguagemVaga,
 
        CASE 
-            WHEN country IN ('Global', 'International') THEN 'International'
-            WHEN country IN ('Paraná') THEN 'Brasil'
+            WHEN country IN ('Global', 'International', 'Mundial') THEN 'International'
+            WHEN country IN ('Paraná',
+                             'Porto Alegre-RS',
+                             'Bahia',
+                             'Barueri - SP',
+                             'São Paulo',
+                             'Sorocaba / SP',
+                             'Rio de Janeiro',
+                             'Brazil',
+                             'São Paulo, SP',
+                             'Nova Lima - MG') THEN 'Brasil'
             WHEN country IS NULL AND language = 'Portuguese' THEN 'Brasil'
             WHEN country IS NULL AND language != 'Portuguese' THEN 'Internacional'
             ELSE country
