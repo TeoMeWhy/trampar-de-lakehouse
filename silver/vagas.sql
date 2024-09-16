@@ -6,7 +6,10 @@ SELECT id AS idVaga,
        company AS descEmpresa,
        language AS descLinguagemVaga,
 
-       CASE WHEN country IS NULL AND language = 'Portuguese' THEN 'Brasil'
+       CASE 
+            WHEN country IN ('Global', 'International') THEN 'International'
+            WHEN country IN ('Paraná') THEN 'Brasil'
+            WHEN country IS NULL AND language = 'Portuguese' THEN 'Brasil'
             WHEN country IS NULL AND language != 'Portuguese' THEN 'Internacional'
             ELSE country
        END AS descPaisVaga,
