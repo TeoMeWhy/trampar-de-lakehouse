@@ -20,6 +20,8 @@ WITH tb_first AS (
                                 'Brazil',
                                 'São Paulo, SP',
                                 'Nova Lima - MG') THEN 'Brasil'
+                WHEN country IN ('Estados Unidos', 'EUA') THEN 'EUA'
+                WHEN country IN ('Canadá', 'Canada') THEN 'Canadá'               
                 WHEN country IS NULL AND language = 'Portuguese' THEN 'Brasil'
                 WHEN country IS NULL AND language != 'Portuguese' THEN 'Internacional'
                 ELSE country
