@@ -86,3 +86,30 @@ class IngestaoStreamingBronze(IngestaoFullBronze):
         df = self.read()
         df_transform = self.transform(df)
         return self.save(df_transform)
+    
+
+class IngestorFullSilver:
+
+    def __init__(self, table, spark):
+        self.table = table
+        self.spark = spark
+        self.query = db.import_query(f"{table}.sql")
+        self.tablename = f"silver.trampar_de_casa.{table}"
+
+    def read(self):
+        query = self.query.format(table=self.table)
+        df = self.spark.sql(self.query)
+        return df
+    
+    def save(self, df):
+        (df.write
+           .mode("overwrite")
+           .format("delta")
+           .option("overwriteSchema", "true")
+           .saveAsTable(self.tablename))
+
+    def auto(self):
+        df = self.read()
+        self.save(df)
+
+
