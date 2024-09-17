@@ -5,6 +5,8 @@ A pedido do [codista](https://bsky.app/profile/codista.trampardecasa.com.br), cr
 
 A ideia é criar todas as camadas de dados para que se possa realizar as devidas análises, dashboards e até futuros modelos de Machine Learning e Inteligência Artificial.
 
+Todo desenvolvimento foi realizado em live e está disponível para [membros do YouTube](https://www.youtube.com/playlist?list=PLvlkVRRKOYFSG6ORablElWKH-G2K3H9Bn) e [Subs da Twitch](https://www.twitch.tv/collections/SOtxLvG_9Rcfbw).
+
 <img src="https://i.ibb.co/8cmj2dY/trampar-de-casa-drawio.png" alt="trampar-de-casa-drawio">
 
 ## Etapas
