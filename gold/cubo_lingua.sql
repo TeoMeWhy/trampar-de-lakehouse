@@ -13,9 +13,9 @@ WITH tb_cubo AS (
 )
 
 SELECT 
-       coalesce(dtRef, 'Geral') AS dtRef,
-       coalesce(descLinguagemVaga, 'Geral') AS descLinguagemVaga,
-       coalesce(descPaisVaga, 'Geral') AS descPaisVaga,
-       coalesce(descMoedaVaga, 'Geral') AS descMoedaVaga,
+       coalesce(dtRef, 'GERAL') AS dtRef,
+       coalesce(descLinguagemVaga, 'GERAL') AS descLinguagemVaga,
+       coalesce(descPaisVaga, 'GERAL') AS descPaisVaga,
+       coalesce(descMoedaVaga, 'GERAL') AS descMoedaVaga,
        qtdeVagas
 FROM tb_cubo
