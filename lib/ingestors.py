@@ -113,3 +113,9 @@ class IngestorFullSilver:
         self.save(df)
 
 
+class IngestorFullGold(IngestorFullSilver):
+
+    def __init__(self, table, spark):
+        super().__init__(table, spark)
+        self.tablename = f"gold.trampar_de_casa.{table}"
+
